@@ -1,4 +1,5 @@
 section .data
+
 one dq 1.0
 
 section .text
@@ -31,5 +32,5 @@ compute_negative_exponent:
     jmp pow_loop
 
 pow_end:
-    movapd xmm0, xmm1
+    movsd xmm0, xmm1
     ret
