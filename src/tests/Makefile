@@ -34,6 +34,10 @@ logistic: $(OUT_DIR)/logistic.o $(OUT_DIR)/exp.o $(OUT_DIR)/pow.o $(OUT_DIR)/fac
 	$(LD) $(LDFLAGS) $(OUT_DIR)/logistic.o $(OUT_DIR)/exp.o $(OUT_DIR)/pow.o $(OUT_DIR)/factorial.o $(TEST_OBJ) \
 	-o $(OUT_DIR)/test-logistic
 
+tanh: $(OUT_DIR)/tanh.o $(OUT_DIR)/exp.o $(OUT_DIR)/pow.o $(OUT_DIR)/factorial.o $(TEST_OBJ)
+	$(LD) $(LDFLAGS) $(OUT_DIR)/tanh.o $(OUT_DIR)/exp.o $(OUT_DIR)/pow.o $(OUT_DIR)/factorial.o $(TEST_OBJ) \
+	-o $(OUT_DIR)/test-tanh
+
 relu: $(OUT_DIR)/relu.o $(TEST_OBJ)
 	$(LD) $(LDFLAGS) $(OUT_DIR)/relu.o $(TEST_OBJ) \
 	-o $(OUT_DIR)/test-relu
