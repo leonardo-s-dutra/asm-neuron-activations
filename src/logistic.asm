@@ -1,6 +1,7 @@
 section .data
-    positive_one dq 1.0
-    negative_one dq -1.0
+
+positive_one dq 1.0
+negative_one dq -1.0
 
 section .text
 extern exp
