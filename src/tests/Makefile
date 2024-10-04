@@ -30,5 +30,9 @@ exp: $(OUT_DIR)/exp.o $(OUT_DIR)/pow.o $(OUT_DIR)/factorial.o $(TEST_OBJ)
 	$(LD) $(LDFLAGS) $(OUT_DIR)/exp.o $(OUT_DIR)/pow.o $(OUT_DIR)/factorial.o $(TEST_OBJ) \
 	-o $(OUT_DIR)/test-exp
 
+logistic: $(OUT_DIR)/logistic.o $(OUT_DIR)/exp.o $(OUT_DIR)/pow.o $(OUT_DIR)/factorial.o $(TEST_OBJ)
+	$(LD) $(LDFLAGS) $(OUT_DIR)/logistic.o $(OUT_DIR)/exp.o $(OUT_DIR)/pow.o $(OUT_DIR)/factorial.o $(TEST_OBJ) \
+	-o $(OUT_DIR)/test-logistic
+
 clean:
 	@rm $(OUT_DIR)/*
