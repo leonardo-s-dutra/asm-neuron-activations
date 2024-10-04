@@ -1,10 +1,34 @@
 SRC_DIR=../.
 OUT_DIR=../../out
 
-all:
-	nasm -f elf64 $(SRC_DIR)/$(TARGET).asm -o $(OUT_DIR)/$(TARGET).o
-	nasm -f elf64 test-$(TARGET).asm -o $(OUT_DIR)/test-$(TARGET).o
-	ld -g $(OUT_DIR)/$(TARGET).o $(OUT_DIR)/test-$(TARGET).o -o $(OUT_DIR)/test-$(TARGET)
+ASM=nasm
+ASMFLAGS=-f elf64
+
+LD=ld
+LDFLAGS=-g
+
+TEST_SRC=test-$(TARGET).asm
+TEST_OBJ=$(OUT_DIR)/test-$(TARGET).o
+
+all: $(TARGET)
+
+$(OUT_DIR)/%.o: $(SRC_DIR)/%.asm
+	$(ASM) $(ASMFLAGS) -o $@ $<
+
+$(TEST_OBJ): $(TEST_SRC)
+	$(ASM) $(ASMFLAGS) -o $@ $<
+
+pow: $(OUT_DIR)/pow.o $(TEST_OBJ)
+	$(LD) $(LDFLAGS) $(OUT_DIR)/pow.o $(TEST_OBJ) \
+	-o $(OUT_DIR)/test-pow
+
+factorial: $(OUT_DIR)/factorial.o $(TEST_OBJ)
+	$(LD) $(LDFLAGS) $(OUT_DIR)/factorial.o $(TEST_OBJ) \
+	-o $(OUT_DIR)/test-factorial
+
+exp: $(OUT_DIR)/exp.o $(OUT_DIR)/pow.o $(OUT_DIR)/factorial.o $(TEST_OBJ)
+	$(LD) $(LDFLAGS) $(OUT_DIR)/exp.o $(OUT_DIR)/pow.o $(OUT_DIR)/factorial.o $(TEST_OBJ) \
+	-o $(OUT_DIR)/test-exp
 
 clean:
 	@rm $(OUT_DIR)/*
