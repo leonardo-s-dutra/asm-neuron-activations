@@ -9,7 +9,6 @@ An efficient library written in NASM assembly for x86-64 architecture that provi
   - Sigmoid (Logistic Function)
   - ReLU (Rectified Linear Unit)
   - Tanh (Hyperbolic Tangent)
-- **Minimalistic**: Written with simplicity, making it proper for integrating into high-performance systems.
 
 ## Getting Started
 
