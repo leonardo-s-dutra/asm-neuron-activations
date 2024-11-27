@@ -14,6 +14,10 @@ An efficient library written in NASM assembly for x86-64 architecture that provi
 
 ### Prerequisites
 
-- **NASM assembler**: You can install it on Linux using:
+- **NASM assembler**: Can be installed on Linux using:
   ```bash
   sudo apt-get install nasm
+
+- **Make**: Can be installed on Linux using:
+  ```bash
+  sudo apt-get install make
