@@ -1,6 +1,6 @@
 # ASM Neuron Activations
 
-Efficient routines in NASM assembly for x86-64 architecture for providing activation functions commonly used in machine learning and neural networks. This repository offers high-performance calculations demonstrations, proper for low-level applications or environments where performance is critical.
+Efficient routines in NASM assembly for x86-64 architecture providing activation functions commonly used in machine learning and neural networks. This repository offers high-performance calculation demonstrations, proper for low-level applications or environments where performance is critical.
 
 ## Features
 
