@@ -1,14 +1,14 @@
-# ASM Activations Lib
+# ASM Neuron Activations
 
-An efficient library written in NASM assembly for x86-64 architecture that provides activation functions commonly used in machine learning and neural networks. This library offers high-performance calculations, proper for low-level applications or environments where performance is critical.
+Efficient routines in NASM assembly for x86-64 architecture for providing activation functions commonly used in machine learning and neural networks. This repository offers high-performance calculations demonstrations, proper for low-level applications or environments where performance is critical.
 
 ## Features
 
 - **Optimized for x86-64 architecture**: Delivers fast activation function computations for x86-64.
-- **Core Activation Functions**:
-  - Sigmoid (Logistic Function)
-  - ReLU (Rectified Linear Unit)
-  - Tanh (Hyperbolic Tangent)
+- **Available Activation Functions**:
+  - Sigmoid (logistic function)
+  - ReLU (rectified linear unit)
+  - Tanh (hyperbolic tangent)
 
 ## Getting Started
 
@@ -21,3 +21,7 @@ An efficient library written in NASM assembly for x86-64 architecture that provi
 - **Make**: Can be installed on Linux using:
   ```bash
   sudo apt-get install make
+
+## Disclaimer
+
+This repository is for educational purposes only. Not intended for direct use in industrial applications.
